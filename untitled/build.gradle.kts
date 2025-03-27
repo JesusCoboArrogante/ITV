@@ -10,6 +10,19 @@ repositories {
 }
 
 dependencies {
+    //Cache Caffeine
+    implementation("com.github.ben-manes.caffeine:caffeine:3.2.0")
+
+    // koin
+    implementation("io.insert-koi-core:4.0.2")
+    implementation("io.insert-koin:koin-annotations:2.0.0")
+
+    // Resuly: ROP
+    implementation("com.michael-bull.kotlin-result:kotlin-result:2.0.1")
+
+    //base de datos
+    implementation("com.h2database:h2:2.3.232")
+
     //libreria Test
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.2")
     testImplementation("org.junit.jupiter:junit-jupiter-engine:5.10.2")
@@ -19,10 +32,10 @@ dependencies {
     implementation("org.jdbi:jdbi3:-core:3.48.0")
     implementation("org.jdbi:jdbi3-sqlobject:3.48.0")
     implementation("org.jdbi:jdbi3-kotlin:3.48.0")
-    implementation("org.jdbi:jdbi3-sqlobject:3.48.0")
+    implementation("org.jdbi:jdbi3-kotlin-sqlobject:3.48.0")
 
     //libreria de json
-    implementation("org.jetbrains.kotlin:kotlinx-serialization-json:1.8.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.0")
 
     //libreria log
     implementation("ch.qos.logback-classic:1.5.12")
@@ -35,3 +48,4 @@ tasks.test {
 kotlin {
     jvmToolchain(21)
 }
+
